@@ -1,0 +1,286 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q3lDTslgG94W",
+        "outputId": "1e561951-8f84-453f-d681-3bbb2bd996b1"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.22.4\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "print(np.__version__)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "#defining array\n",
+        "array = np.array([1,2,3,4,5])\n",
+        "print(array)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v7CdOcRFJKlU",
+        "outputId": "a4ec9ea1-3739-4f6d-efd8-b97a54e4f393"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1 2 3 4 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "from numpy.random import random\n",
+        "#by default generates float value\n",
+        "random()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u0p_OaC8Jidq",
+        "outputId": "7bfefca9-cd28-4818-ec3d-a262842ad34b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0.44815308552268107"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=random()\n",
+        "if x>0.8:\n",
+        "  ans=\"Greater than 0.8\"\n",
+        "else:\n",
+        "  ans=\"Smaller than 0.8\"\n",
+        "print(ans)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ijD6eDytLHxW",
+        "outputId": "dc694c78-c2e3-414e-dd2a-efbee3b25494"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Greater than 0.8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input(\"Enter n: \"))\n",
+        "while n!=0:\n",
+        "    print(n)\n",
+        "    n-=1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tNaEYhiXMOA6",
+        "outputId": "b061335c-5659-46ed-91e4-d01d9bac1084"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter n: 8\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input(\"Enter n: \"))\n",
+        "ans=1\n",
+        "while(n!=1):\n",
+        "  ans*=n\n",
+        "  n-=1\n",
+        "print(ans)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4qnK_fgIRQ4-",
+        "outputId": "7327bb3a-acfc-4e0a-9010-703147a92acc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter n: 5\n",
+            "120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  AND\n",
+        "X  Y  O/P\n",
+        "0  0   0\n",
+        "0  1   0\n",
+        "1  0   0\n",
+        "1  1   1\n",
+        "\n",
+        "  OR\n",
+        "X  Y  O/P\n",
+        "0  0   0\n",
+        "0  1   1\n",
+        "1  0   1\n",
+        "1  1   1\n",
+        "\n",
+        " NOT\n",
+        "X  O/P\n",
+        "0   1\n",
+        "1   0\n",
+        "\n",
+        " BITWISE\n",
+        "X  Y  P&Q  P|Q  P^Q  ~P\n",
+        "0  0   0    0    0    1\n",
+        "0  1   0    1    1\n",
+        "1  0   0    1    1    0\n",
+        "1  1   1    1    0"
+      ],
+      "metadata": {
+        "id": "y4WJG5lvU6fj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input(\"Enter n: \"))\n",
+        "ans=0\n",
+        "while(n!=0):\n",
+        "  digit=n%10\n",
+        "  ans=ans*10+digit\n",
+        "  n=int(n/10)\n",
+        "print(ans)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L3tE-eTGWyuO",
+        "outputId": "018f047a-67ed-4e56-fc86-0a425fdd4a55"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter n: 123\n",
+            "321\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input(\"Enter binary value : \"))\n",
+        "ans=0\n",
+        "i=0\n",
+        "k=len(str(n))\n",
+        "while(k!=0):\n",
+        "  digit=n%10\n",
+        "  ans+=digit*2**i\n",
+        "  i+=1\n",
+        "  k-=1\n",
+        "  n=int(n/10)\n",
+        "print(ans)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fKqVWQgKZ02L",
+        "outputId": "cc7742fb-326b-4974-d623-13cb99416419"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter binary value : 111\n",
+            "7\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
